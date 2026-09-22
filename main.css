@@ -101,12 +101,141 @@ body {
 
 .envelope > .description {
   position: absolute;
-  z-index: 999;
+  /* z-index: 999; */
   font-size: 24px;
   top: 17.5px;
   left: 160px;
   font-family: "GriunXHangeul_SarangSeuReoUn-Rg";
   color: #efefef;
+}
+
+.envelope-open {
+  position: absolute;
+  top: 124px;
+  left: 4px;
+
+  width: 424px;
+  height: 808px;
+
+  background-color: #aa6900;
+  border-radius: 4px;
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  pointer-events: none;
+  transition:
+    opacity 0.45s ease,
+    transform 0.45s ease;
+}
+
+.envelope-open.is-open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.close-letter {
+  position: absolute;
+  top: -17px;
+  right: -10px;
+  z-index: 2;
+  width: 38px;
+  height: 38px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  color: #fff;
+  background: #aa6900;
+  font-size: 28px;
+  line-height: 1;
+}
+
+.letter-slider {
+  position: absolute;
+  top: 16px;
+  left: 13.5px;
+
+  width: 397px;
+  height: 776px;
+  overflow: hidden;
+}
+
+.letter-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.45s ease;
+}
+
+.envelope-open .layer {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+.envelope-open .content {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.envelope-open .content > p {
+  font-family: "GriunXHangeul_SarangSeuReoUn-Rg";
+  line-height: 1.5;
+
+  border-bottom: 1px solid #aaa;
+  box-sizing: border-box;
+  padding-bottom: 4px;
+}
+
+.envelope-open .content > .picFirst {
+  display: block;
+  margin: 33px auto;
+  /* 가운데 정렬 */
+
+  width: 325px;
+  height: 295px;
+}
+
+.slide-button {
+  position: absolute;
+  top: 50%;
+  z-index: 1;
+  width: 38px;
+  height: 56px;
+  border: 0;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+  background: rgb(0 0 0 / 35%);
+  font-size: 42px;
+  line-height: 1;
+}
+
+.slide-button.prev {
+  left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.slide-button.next {
+  right: 0;
+  border-radius: 8px 0 0 8px;
+}
+
+.slide-button:disabled {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.slide-status {
+  position: absolute;
+  right: 12px;
+  bottom: 10px;
+  padding: 4px 9px;
+  border-radius: 12px;
+  color: #fff;
+  background: rgb(0 0 0 / 40%);
+  font-size: 13px;
 }
 
 .footer {

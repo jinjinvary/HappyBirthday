@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Bithday!</title>
+    <title>Happy Birthday!</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -27,6 +27,37 @@
       <div class="envelope">
         <img src="./assets/envelope.png" alt="편지봉투" />
         <span class="description">click here</span>
+      </div>
+      <div class="envelope-open">
+        <!-- envelope 클릭 시 opacity: 1로 변하기 + 모양이 변하면서 밑에서 튀어 나오기 -->
+        <button class="close-letter" type="button" aria-label="Close letter">×</button>
+        <div class="letter-slider" aria-label="Birthday letter">
+          <div class="letter-track">
+            <section class="layer" aria-label="Letter page 1">
+          <!-- 편지지 색상 조절 -->
+          <div class="content">
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adiquia.</p>
+            <img class="picFirst" src="./assets/논땡이.jpg" alt="yeah's pic" />
+          </div>
+            </section>
+            <section class="layer" aria-label="Letter page 2">
+              <div class="content">
+                <p>두 번째 편지 페이지입니다.</p>
+                <p>전하고 싶은 생일 축하 메시지를 여기에 적어 주세요.</p>
+              </div>
+            </section>
+          </div>
+          <button class="slide-button prev" type="button" aria-label="Previous letter">‹</button>
+          <button class="slide-button next" type="button" aria-label="Next letter">›</button>
+          <div class="slide-status" aria-live="polite">1 / 2</div>
+        </div>
       </div>
     </div>
     <script src="main.js"></script>
