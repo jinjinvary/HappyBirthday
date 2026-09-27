@@ -55,6 +55,7 @@ let touchStartX = 0;
 function showPage(pageIndex) {
   currentPage = Math.max(0, Math.min(pageIndex, pages.length - 1));
   track.style.transform = `translateX(-${currentPage * 100}%)`;
+  openLetter.classList.toggle("is-page-two", currentPage === 1);
   previousButton.disabled = currentPage === 0;
   nextButton.disabled = currentPage === pages.length - 1;
   slideStatus.textContent = `${currentPage + 1} / ${pages.length}`;
@@ -86,3 +87,19 @@ track.addEventListener("touchend", (event) => {
 });
 
 showPage(0);
+
+const video = document.querySelector("video");
+
+let count = 0;
+
+video.addEventListener("ended", () => {
+  count++;
+
+  if (count >= 3) {
+    video.style.opacity = "0";
+    return;
+  }
+
+  video.currentTime = 0;
+  video.play();
+});

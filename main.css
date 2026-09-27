@@ -93,7 +93,6 @@ body {
 
 .envelope {
   opacity: 0;
-  /* 일단 지워놓기 + 지렁이 디자인 끝내고 다시 켜서 위치 조정할 것 */
   position: relative;
   top: 801.5px;
   transition: opacity 1s ease;
@@ -134,6 +133,10 @@ body {
   pointer-events: auto;
 }
 
+.envelope-open.is-page-two {
+  background-color: #e2dfdf;
+}
+
 .close-letter {
   position: absolute;
   top: -17px;
@@ -144,10 +147,15 @@ body {
   border: 2px solid #fff;
   border-radius: 50%;
   cursor: pointer;
-  color: #fff;
+  color: rgba(255, 255, 255, 0.5);
   background: #aa6900;
   font-size: 28px;
   line-height: 1;
+  transition: background-color 0.45s ease;
+}
+
+.envelope-open.is-page-two .close-letter {
+  background-color: #e2dfdf;
 }
 
 .letter-slider {
@@ -169,10 +177,59 @@ body {
 
 .envelope-open .layer {
   flex: 0 0 100%;
+  position: relative;
   width: 100%;
   height: 100%;
   overflow-y: auto;
-  background-color: #fff;
+  color: #d0d0d0;
+}
+
+.envelope-open .layer:first-child {
+  background-color: #ddbe24;
+  color: #000;
+}
+
+.envelope-open .layer:first-child #layerImg3 {
+  position: absolute;
+  z-index: 0;
+  top: 7px;
+  left: -5px;
+
+  width: 400px;
+  height: 768px;
+  opacity: 0.7;
+}
+
+.envelope-open .layer:first-child .content > p {
+  position: relative;
+  z-index: 2;
+}
+
+.envelope-open .layer:nth-child(2) {
+  background-color: #111;
+}
+
+.envelope-open .layer:nth-child(2) #layerImg1 {
+  position: absolute;
+  z-index: 0;
+  top: 6px;
+  left: -46px;
+  width: 440px;
+  height: 760px;
+}
+
+.envelope-open .layer:nth-child(2) .content > p {
+  position: relative;
+  z-index: 2;
+}
+
+.envelope-open .layer:nth-child(2) #layerImg2 {
+  position: absolute;
+  z-index: 2;
+  top: -20px;
+  left: -15px;
+  width: 382x;
+  height: 492px;
 }
 
 .envelope-open .content {
@@ -180,7 +237,7 @@ body {
   padding-right: 15px;
 }
 
-.envelope-open .content > p {
+.envelope-open .content p {
   font-family: "GriunXHangeul_SarangSeuReoUn-Rg";
   line-height: 1.5;
 
@@ -189,13 +246,82 @@ body {
   padding-bottom: 4px;
 }
 
-.envelope-open .content > .picFirst {
-  display: block;
-  margin: 33px auto;
+.envelope-open .content > video {
+  width: 136px;
+  height: 203px;
+  object-fit: cover;
+  position: absolute;
+  top: 365px;
+  z-index: 4;
+  transition: opacity 1s ease-out;
+}
+
+.envelope-open .content > #picFirst {
+  position: absolute;
+  z-index: 5;
+  margin: 89px auto;
   /* 가운데 정렬 */
 
-  width: 325px;
-  height: 295px;
+  width: 174px;
+  height: 232px;
+
+  top: 402px;
+  left: 122px;
+}
+
+.envelope-open .content > #picSecond {
+  width: 136px;
+  height: 203px;
+  position: absolute;
+  z-index: 3;
+  top: 365px;
+  left: 16px;
+}
+
+.layer > .content > .gifContainer {
+  position: relative;
+  z-index: 2;
+
+  margin: 20px auto;
+  width: 300px;
+  height: 410px;
+}
+
+.gifContainer img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+}
+
+#firstGif {
+  animation: showFirst 2s steps(1, end) infinite;
+}
+
+#secondGif {
+  animation: showSecond 2s steps(1, end) infinite;
+}
+
+@keyframes showFirst {
+  0%,
+  49.99% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes showSecond {
+  0%,
+  49.99% {
+    opacity: 0;
+  }
+  50%,
+  100% {
+    opacity: 1;
+  }
 }
 
 .slide-button {
