@@ -251,7 +251,7 @@ body {
   height: 203px;
   object-fit: cover;
   position: absolute;
-  top: 365px;
+  top: 410px;
   z-index: 4;
   transition: opacity 1s ease-out;
 }
@@ -265,7 +265,7 @@ body {
   width: 174px;
   height: 232px;
 
-  top: 402px;
+  top: 442px;
   left: 122px;
 }
 
@@ -274,7 +274,7 @@ body {
   height: 203px;
   position: absolute;
   z-index: 3;
-  top: 365px;
+  top: 410px;
   left: 16px;
 }
 
