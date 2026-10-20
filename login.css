@@ -6,6 +6,8 @@ html,
 body {
   margin: 0;
   padding: 0;
+  width:100%;
+  min-height: 100%;
 }
 
 @font-face {
@@ -29,7 +31,8 @@ button {
   /* iphone 14 & 15 pro max 기준 화면 너비 */
   width: 100%;
   max-width: 430px;
-  min-height: 932px;
+  min-height: 100vh;
+  min-height: 100dvh;
   margin: 0 auto;
   background-color: #ffefd5;
   position: relative;
