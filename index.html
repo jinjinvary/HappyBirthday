@@ -1,99 +1,19 @@
+
 <!doctype html>
-<html lang="zcx">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Happy Birthday!</title>
-    <link rel="stylesheet" href="main.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <div id="header">HAPPY BIRTHDAY!</div>
-      <img src="./assets/particles.svg" alt="파티클" class="particle" />
-      <div class="worm" aria-hidden="true">
-        <img src="./assets/StopWorm.svg" class="worm-stop" />
-        <img src="./assets/MovigWorm.svg" class="worm-moving" />
-      </div>
-      <div class="footer">
-        생일 축하해 <br />
-        예진아♥
-      </div>
-      <div class="envelope">
-        <img src="./assets/envelope.png" alt="편지봉투" />
-        <span class="description">click here</span>
-      </div>
-      <div class="envelope-open">
-        <!-- envelope 클릭 시 opacity: 1로 변하기 + 모양이 변하면서 밑에서 튀어 나오기 -->
-        <button class="close-letter" type="button" aria-label="Close letter">
-          ×
-        </button>
-        <div class="letter-slider" aria-label="Birthday letter">
-          <div class="letter-track">
-            <section class="layer" aria-label="Letter page 1">
-              <!-- 편지지 색상 조절 -->
-              <div class="content">
-                <img id="layerImg3" src="./assets/이미지_계층3.svg" alt="" />
-                <p>사랑하는 찌떡이에게</p>
-                <p>안녕 찌떡아! 나 멋있는 진영이야. 오늘이 무슨 날이게?</p>
-                <p>무슨 날이냐면 드디어 돌아온 예진이 생일이야! 이날을 엄청</p>
-                <p>기대했을텐데, 이번엔 같이 생일을 보낼 수 있어서 다행이</p>
-                <p>다. 생각해 보면 처음으로 예진이 생일 당일을 같이 보내는</p>
-                <p>건데 뭘 해야 예진이 기억에 남는 생일이 될까 하다가</p>
-                <p>웹페이지 만들어서 예진이 생일 축하하면 좋겠다 싶었어!</p>
-                <p>어때?!지렁이도있고 케이크도 있어!!여기 사진이랑</p>
-                <p>영상 보면 벌써 어느새 완전 추억이지 않아?</p>
-                <video autoplay muted playsinline>
-                  <source src="./assets/반가워.mp4" type="video/mp4" />
-                </video>
-                <img
-                  id="picSecond"
-                  src="./assets/동영상 예정.svg"
-                  alt="처음 사귀고"
-                />
-                <img id="picFirst" src="./assets/사진1.svg" alt="yeah's pic" />
-              </div>
-            </section>
-            <section class="layer" aria-label="Letter page 2">
-              <div class="content">
-                <img id="layerImg1" src="./assets/이미지_계층1.svg" alt="" />
-                <div class="gifContainer">
-                  <img id="firstGif" src="./assets/움짤1.svg" alt="" />
-                  <img id="secondGif" src="./assets/움짤2.svg" alt="" />
-                </div>
-                <img src="./assets/이미지_계층2.svg" alt="" id="layerImg2" />
-                <p>어쨌든 예진이 마음에도 들면 좋겠다. 예진이가</p>
-                <p>나랑 보내는 하루하루가 매번 행복하다고 느낄 수</p>
-                <p>있도록 하고싶었어! 그래서 뭔가 특별한 걸 찾게 되</p>
-                <p>는 것 같네ㅋㅋㅋㅋ 앞으로도 나랑 맨날맨날 행복하고</p>
-                <p>재미있게 놀자! 다시 한번 오늘 생일 축하해!!</p>
-                <p>♥모찌떡 사랑하는 진영이가</p>
-              </div>
-            </section>
-          </div>
-          <button
-            class="slide-button prev"
-            type="button"
-            aria-label="Previous letter"
-          >
-            ‹
-          </button>
-          <button
-            class="slide-button next"
-            type="button"
-            aria-label="Next letter"
-          >
-            ›
-          </button>
-          <div class="slide-status" aria-live="polite">1 / 2</div>
-        </div>
-      </div>
-    </div>
-    <script src="main.js"></script>
-  </body>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="refresh" content="0; url=./login.html">
+  <title>로그인 페이지로 이동 중</title>
+</head>
+<body>
+  <script>
+    window.location.replace("./login.html");
+  </script>
+  <p>
+    로그인 페이지로 이동하지 않는다면
+    <a href="./login.html">여기를 클릭하세요.</a>
+  </p>
+</body>
 </html>
