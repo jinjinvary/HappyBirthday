@@ -201,6 +201,7 @@ input::placeholder {
   left: -18px;
   width: 450px;
   height: 440.2px;
+  pointer-events: none;
 }
 
 #deco6 {
