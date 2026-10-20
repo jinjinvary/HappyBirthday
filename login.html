@@ -50,13 +50,34 @@
       <div class="frame">
         <div class="layer">
           <div class="title">너 누구야?!</div>
-          <form action="#">
-            <input type="text" placeholder="이름" />
-            <input type="password" placeholder="생년월일(ex.000530)" />
+          <form id="loginForm">
+            <input type="text" placeholder="이름" id="name" autocomplete="off" required />
+            <input type="password" placeholder="생년월일(ex.000530)" id="birth" inputmode="numeric" required />
             <button type="submit" class="check">확인</button>
+            <p id="message" role="status"></p>
           </form>
         </div>
       </div>
     </div>
+    <script>
+      const form = document.getElementById("loginForm");
+      const message = document.getElementById("message");
+
+      form.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const name = document.getElementById("name").value.trim();
+        const birth = document.getElementById("birth").value.trim();
+
+        const correctName = "장예진";
+        const correctBirth = "001020";
+
+        if (name === correctName && birth === correctBirth) {
+          window.location.href = "./index.html";
+        } else {
+          message.textContent = "누구신데요?! 이름과 생년월일을 다시 확인해 봐!";
+        }
+      });
+    </script>
   </body>
 </html>
